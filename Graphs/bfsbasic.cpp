@@ -40,7 +40,7 @@ vector<int> BFS(vector<int> adj[],int n, int source)
     {
         int u = q.front();
         q.pop();
-        bfs_traversal.push_back(u);
+        
 
         for(int i=0;i<adj[u].size();i++)
         {   
@@ -50,6 +50,7 @@ vector<int> BFS(vector<int> adj[],int n, int source)
                 visited[adj[u][i]] = 1;
             }
         }
+        bfs_traversal.push_back(u);
     }
 
     return bfs_traversal;
