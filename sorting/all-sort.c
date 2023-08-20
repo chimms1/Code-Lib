@@ -135,8 +135,18 @@ void MergeSort(int A[],int p,int r)
 
 int Partition(int A[],int low, int high)
 {
-    // First element is pivot
-    int pivot = A[low];
+    //  4 6 1 9 8 7
+    //      j i
+    //
+    //  4 6 9 1 8 7, does not happen as i>j
+    //
+
+    // pivot =  anything except high -> j, where j starts from high
+    // pivot = high -> j+1, where j starts from high-1
+
+
+    int pivotindex = low;
+    int pivot = A[pivotindex];
     int i=low;
     int j=high;
 
@@ -155,7 +165,8 @@ int Partition(int A[],int low, int high)
             swap(&A[i],&A[j]);
         }
     }
-    swap(&A[low],&A[j]);
+    printf("low: %d\ti: %d\tj: %d\n",low,i,j);
+    swap(&A[pivotindex],&A[j]);
 
     return j;
 }

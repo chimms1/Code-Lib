@@ -6,7 +6,7 @@
 void fillRandom(int A[],int n)
 {
 	int i;
-	srand(time(NULL));
+	// srand(time(NULL));
     
 	for(i=0;i<n;i++)
 	{
