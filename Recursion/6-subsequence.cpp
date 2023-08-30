@@ -24,7 +24,7 @@ void AllSubsequence(int i, vector<int>ans,vector<int>A)
 
 int main()
 {
-    vector<int>A = {3,1,2};
+    vector<int>A = {3,1,1,2};
     
     AllSubsequence(0,{},A);
 }
